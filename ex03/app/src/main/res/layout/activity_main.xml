@@ -51,7 +51,8 @@
         android:drawableBottom="@drawable/ic_launcher_foreground"
         android:onClick="onButtonClick" />
     -->
-    
+
+    <!--
     <TextView
         android:id="@+id/num1"
         android:layout_width="wrap_content"
@@ -83,5 +84,66 @@
         android:onClick="onClickSum"
         android:text="두 수의 합은?"
         android:textSize="20dp" />
+    -->
+
+    <!--
+    <EditText
+        android:id="@+id/editTextId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Email"
+        android:textColor="#ff0000"
+        android:textColorHint="#00ff00"
+        android:textSize="25sp"
+        android:textStyle="bold|italic"
+        android:background="#000000"
+        android:gravity="right"
+        android:inputType="phone" />
+    -->
+
+    <EditText
+        android:id="@+id/edtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="성명"
+        android:inputType="text"
+        android:selectAllOnFocus="true" />
+
+    <EditText
+        android:id="@+id/edtPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:hint="비밀번호 0 to 9"
+        android:inputType="numberPassword" />
+
+    <EditText
+        android:id="@+id/edtEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:ems="10"
+        android:hint="이메일"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/edtDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:ems="10"
+        android:hint="생년월일"
+        android:inputType="date" />
+
+    <EditText
+        android:id="@+id/edtPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:ems="10"
+        android:hint="연락처"
+        android:inputType="phone" />
 
 </LinearLayout>

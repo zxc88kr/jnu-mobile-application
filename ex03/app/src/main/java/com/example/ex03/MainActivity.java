@@ -12,8 +12,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+    /*
     TextView tvObj1;
     TextView tvObj2;
+    */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,8 +46,10 @@ public class MainActivity extends AppCompatActivity {
         textView.setTypeface(Typeface.SERIF);
         */
 
+        /*
         tvObj1 = findViewById(R.id.num1);
         tvObj2 = findViewById(R.id.num2);
+        */
     }
 
     /*
@@ -54,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
     }
     */
 
+    /*
     public void onClickSum(View view) {
         String value1 = tvObj1.getText().toString();
         String value2 = tvObj2.getText().toString();
@@ -62,4 +67,5 @@ public class MainActivity extends AppCompatActivity {
         int sum = a + b;
         Toast.makeText(getApplicationContext(), String.valueOf(sum), Toast.LENGTH_LONG).show();
     }
+    */
 }
