@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "숫자를 입력해주세요", Toast.LENGTH_SHORT).show();
                     resultTxt.setText("none");
                 } else {
-                    resultTxt.setText(String.valueOf(Integer.parseInt(num1) + Integer.parseInt(num2)));
+                    resultTxt.setText(String.valueOf(Long.parseLong(num1) + Long.parseLong(num2)));
                 }
             }
         });
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "숫자를 입력해주세요", Toast.LENGTH_SHORT).show();
                     resultTxt.setText("none");
                 } else {
-                    resultTxt.setText(String.valueOf(Integer.parseInt(num1) - Integer.parseInt(num2)));
+                    resultTxt.setText(String.valueOf(Long.parseLong(num1) - Long.parseLong(num2)));
                 }
             }
         });
@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "숫자를 입력해주세요", Toast.LENGTH_SHORT).show();
                     resultTxt.setText("none");
                 } else {
-                    resultTxt.setText(String.valueOf(Integer.parseInt(num1) * Integer.parseInt(num2)));
+                    resultTxt.setText(String.valueOf(Long.parseLong(num1) * Long.parseLong(num2)));
                 }
             }
         });
@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "0으로 나눌 수 없습니다", Toast.LENGTH_SHORT).show();
                     resultTxt.setText("NaN");
                 } else {
-                    resultTxt.setText(String.valueOf(Double.parseDouble(num1) / Integer.parseInt(num2)));
+                    resultTxt.setText(String.valueOf(Double.parseDouble(num1) / Long.parseLong(num2)));
                 }
             }
         });
