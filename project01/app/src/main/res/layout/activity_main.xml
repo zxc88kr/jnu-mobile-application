@@ -8,7 +8,7 @@
     android:padding="30dp">
 
     <EditText
-        android:id="@+id/num1"
+        android:id="@+id/numEdt1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="12"
@@ -23,7 +23,7 @@
         android:backgroundTint="#000069" />
 
     <EditText
-        android:id="@+id/num2"
+        android:id="@+id/numEdt2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="12"
@@ -38,7 +38,7 @@
         android:backgroundTint="#000069" />
 
     <Button
-        android:id="@+id/plus"
+        android:id="@+id/addBtn"
         android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
@@ -49,7 +49,7 @@
         android:backgroundTint="#6e6ed7" />
 
     <Button
-        android:id="@+id/minus"
+        android:id="@+id/subBtn"
         android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
@@ -60,7 +60,7 @@
         android:backgroundTint="#6e6ed7" />
 
     <Button
-        android:id="@+id/multiply"
+        android:id="@+id/mulBtn"
         android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
@@ -71,7 +71,7 @@
         android:backgroundTint="#6e6ed7" />
 
     <Button
-        android:id="@+id/divide"
+        android:id="@+id/divBtn"
         android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
@@ -82,7 +82,7 @@
         android:backgroundTint="#6e6ed7" />
 
     <TextView
-        android:id="@+id/resultText"
+        android:id="@+id/resultDscTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
@@ -91,11 +91,11 @@
         android:textColor="#c71585" />
 
     <TextView
-        android:id="@+id/result"
+        android:id="@+id/resultTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        android:text=""
+        android:text="none"
         android:textSize="20sp"
         android:textColor="#c71585" />
 
