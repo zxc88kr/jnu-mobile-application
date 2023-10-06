@@ -98,5 +98,4 @@
         android:text="none"
         android:textSize="20sp"
         android:textColor="#c71585" />
-
 </LinearLayout>
