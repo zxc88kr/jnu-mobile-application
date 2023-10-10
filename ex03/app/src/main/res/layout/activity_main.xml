@@ -320,6 +320,7 @@
         app:srcCompat="@drawable/q10" />
     -->
 
+    <!--
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="100dp"
@@ -333,4 +334,5 @@
         android:layout_height="wrap_content"
         android:scaleType="fitStart"
         android:src="@drawable/cat_large" />
+    -->
 </LinearLayout>

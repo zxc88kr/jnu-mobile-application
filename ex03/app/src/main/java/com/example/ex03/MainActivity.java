@@ -75,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
         });
         */
 
+        /*
         EditText nameObj, passwordObj, emailObj, dateObj, phoneObj;
         Button btnObj;
         TextView resultObj;
@@ -106,6 +107,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+        */
     }
 
     /*
