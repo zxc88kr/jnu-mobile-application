@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,6 +26,14 @@ public class MainActivity extends AppCompatActivity {
     String num1, num2;
     Integer result;
     */
+
+    ImageView imgObj;
+    TextView numObj;
+    Button btnObj;
+    Integer imgNumber[] = { R.drawable.cat01, R.drawable.cat02,
+                            R.drawable.cat03, R.drawable.cat04,
+                            R.drawable.cat05, R.drawable.cat06 };
+    Integer index = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -108,6 +117,18 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         */
+
+        imgObj = findViewById(R.id.imageView);
+        numObj = findViewById(R.id.txtIndex);
+        btnObj = findViewById(R.id.btnNext);
+        btnObj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                index = (index + 1) % imgNumber.length;
+                imgObj.setImageResource(imgNumber[index]);
+                numObj.setText(Integer.toString(index + 1) + "번 이미지");
+            }
+        });
     }
 
     /*
