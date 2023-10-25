@@ -14,7 +14,8 @@
         android:textStyle="italic|bold"
         android:textSize="50sp"
         android:gravity="center"
-        android:typeface="normal" />
+        android:typeface="normal"
+        android:background="#00ff00" />
 
     <Button
         android:layout_width="360dp"
@@ -26,5 +27,17 @@
         android:textStyle="italic|bold"
         android:backgroundTint="#0000ff"
         android:drawableLeft="@drawable/menu01"
-        android:onClick="onButtonClick" />
+        android:onClick="onButtonClick2" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="username"
+        android:textColor="#ffffff"
+        android:textColorHint="#0fff00"
+        android:inputType="numberPassword"
+        android:gravity="right|center_vertical"
+        android:text="1111"
+        android:background="#000000" />
 </LinearLayout>
