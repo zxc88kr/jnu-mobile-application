@@ -40,4 +40,13 @@
         android:gravity="right|center_vertical"
         android:text="1111"
         android:background="#000000" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:src="@drawable/menu01"
+        android:background="#0000ff"
+        android:padding="10dp"
+        android:scaleType="fitXY" />
 </LinearLayout>
