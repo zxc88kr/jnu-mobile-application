@@ -1,18 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#00aaaa"
+        android:foregroundGravity="center"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cover02"
+            android:layout_gravity="center"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cover01"
+            android:layout_gravity="center"
+            android:visibility="visible" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cover00"
+            android:layout_gravity="center"
+            android:visibility="visible" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/imageBtn1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/menu01"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:background="#d3d3d3"
+                android:layout_gravity="bottom"
+                android:visibility="visible"
+                android:layout_weight="1"
+                android:onClick="onClickMenu" />
+
+            <ImageButton
+                android:id="@+id/imageBtn2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/menu02"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:background="#d3d3d3"
+                android:layout_gravity="bottom"
+                android:visibility="visible"
+                android:layout_weight="1"
+                android:onClick="onClickMenu" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/imageBtn3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/menu03"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:background="#d3d3d3"
+                android:layout_gravity="top"
+                android:visibility="visible"
+                android:layout_weight="1"
+                android:onClick="onClickMenu" />
+
+            <ImageButton
+                android:id="@+id/imageBtn4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/menu04"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:background="#d3d3d3"
+                android:layout_gravity="top"
+                android:visibility="visible"
+                android:layout_weight="1"
+                android:onClick="onClickMenu" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:background="#777777"
+        android:foreground="@drawable/logo"
+        android:foregroundGravity="fill">
+    </FrameLayout>
+</LinearLayout>
