@@ -8,28 +8,31 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="#00aaaa"
-        android:layout_weight="1">
+        android:layout_weight="0.9">
 
-        <ImageView
+        <ImageButton
+            android:id="@+id/coverBtn1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/cover01"
             android:layout_gravity="center"
-            android:visibility="visible" />
+            android:visibility="visible"
+            android:onClick="onClickCover" />
 
-        <ImageView
+        <ImageButton
+            android:id="@+id/coverBtn2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/cover02"
             android:layout_gravity="center"
-            android:visibility="invisible" />
+            android:visibility="invisible"
+            android:onClick="onClickCover" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/cover00"
-            android:layout_gravity="center"
-            android:visibility="visible" />
+            android:layout_gravity="center"/>
     </FrameLayout>
 
     <TableLayout
@@ -41,10 +44,10 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp">
+            android:layout_marginTop="12dp">
 
             <ImageButton
-                android:id="@+id/imageBtn1"
+                android:id="@+id/menuBtn1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/menu01"
@@ -54,7 +57,7 @@
                 android:onClick="onClickMenu" />
 
             <ImageButton
-                android:id="@+id/imageBtn2"
+                android:id="@+id/menuBtn2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/menu02"
@@ -67,10 +70,10 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp">
+            android:layout_marginTop="12dp">
 
             <ImageButton
-                android:id="@+id/imageBtn3"
+                android:id="@+id/menuBtn3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/menu03"
@@ -80,7 +83,7 @@
                 android:onClick="onClickMenu" />
 
             <ImageButton
-                android:id="@+id/imageBtn4"
+                android:id="@+id/menuBtn4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/menu04"
