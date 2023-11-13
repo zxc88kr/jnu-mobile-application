@@ -1,50 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="20dp"
-    android:orientation="vertical">
+    android:layout_height="match_parent"
+    android:layout_margin="25dp">
 
-    <CheckBox
-        android:id="@+id/checkBox1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="CheckBox1" />
-
-    <CheckBox
-        android:id="@+id/checkBox2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="CheckBox2" />
-
-    <CheckBox
-        android:id="@+id/checkBox3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="CheckBox3" />
-
-    <RadioGroup
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="wrap_content"
+        android:text="What is?"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="25dp"
+        android:textColor="#8bc34a"
+        android:textStyle="italic|bold"
+        android:gravity="right"/>
 
-        <RadioButton
-            android:id="@+id/radioButton1"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintlayout"
+        android:layout_width="360dp"
+        android:layout_height="360dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="140dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView">
+
+        <FrameLayout
+            android:id="@+id/framelaout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="RadioButton1" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-        <RadioButton
-            android:id="@+id/radioButton2"
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/question"/>
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="70dp"
+                android:paddingBottom="10dp"
+                android:visibility="invisible"
+                android:src="@drawable/answer2"/>
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraintlayout">
+
+        <ImageButton
+            android:id="@+id/imageButton1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/answer1"
+            app:layout_constraintRight_toLeftOf="@id/imageButton2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/answer2"
+            app:layout_constraintLeft_toRightOf="@id/imageButton1"
+            app:layout_constraintRight_toLeftOf="@id/imageButton3"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/answer3"
+            app:layout_constraintLeft_toRightOf="@id/imageButton2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="RadioButton2" />
+            android:text="1"
+            app:layout_constraintLeft_toLeftOf="@id/imageButton1"
+            app:layout_constraintRight_toRightOf="@id/imageButton1"
+            app:layout_constraintTop_toBottomOf="@id/imageButton1"/>
 
-        <RadioButton
-            android:id="@+id/radioButton3"
+        <TextView
+            android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="RadioButton2" />
-    </RadioGroup>
+            android:text="2"
+            app:layout_constraintLeft_toLeftOf="@id/imageButton2"
+            app:layout_constraintRight_toRightOf="@id/imageButton2"
+            app:layout_constraintTop_toBottomOf="@id/imageButton2"/>
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"
+            app:layout_constraintLeft_toLeftOf="@id/imageButton3"
+            app:layout_constraintRight_toRightOf="@id/imageButton3"
+            app:layout_constraintTop_toBottomOf="@id/imageButton3"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

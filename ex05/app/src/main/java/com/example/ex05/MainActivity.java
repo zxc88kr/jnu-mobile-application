@@ -1,11 +1,12 @@
 package com.example.ex05;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,28 +21,31 @@ public class MainActivity extends AppCompatActivity {
         btObj1 = findViewById(R.id.imageButton1);
         btObj2 = findViewById(R.id.imageButton2);
         btObj3 = findViewById(R.id.imageButton3);
-        ivObj  = findViewById(R.id.imageView2);
+        ivObj = findViewById(R.id.imageView2);
+
         btObj1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 ivObj.setVisibility(View.VISIBLE);
-                ivObj.setImageResource(R.drawable.anwer1);
+                ivObj.setImageResource(R.drawable.answer1);
                 Toast.makeText(getApplicationContext(), "틀렸습니다", Toast.LENGTH_SHORT).show();
             }
         });
+
         btObj2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 ivObj.setVisibility(View.VISIBLE);
-                ivObj.setImageResource(R.drawable.anwer2);
+                ivObj.setImageResource(R.drawable.answer2);
                 Toast.makeText(getApplicationContext(), "맞았습니다", Toast.LENGTH_SHORT).show();
             }
         });
+
         btObj3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 ivObj.setVisibility(View.VISIBLE);
-                ivObj.setImageResource(R.drawable.anwer3);
+                ivObj.setImageResource(R.drawable.answer3);
                 Toast.makeText(getApplicationContext(), "틀렸습니다", Toast.LENGTH_SHORT).show();
             }
         });
