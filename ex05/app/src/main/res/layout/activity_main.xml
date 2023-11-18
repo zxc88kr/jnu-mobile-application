@@ -3,49 +3,54 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_margin="50dp">
+    android:layout_margin="10dp">
 
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
-
-        <RadioButton
-            android:id="@+id/radioButton1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:textStyle="italic|bold"
-            android:textColor="#fdf835"
-            android:padding="10dp"
-            android:textSize="20dp"
-            android:text="baby" />
-
-        <RadioButton
-            android:id="@+id/radioButton2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textStyle="italic|bold"
-            android:textColor="#e040fb"
-            android:padding="10dp"
-            android:textSize="20dp"
-            android:text="mom" />
-
-        <RadioButton
-            android:id="@+id/radioButton3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textStyle="italic|bold"
-            android:textColor="#4484ff"
-            android:padding="10dp"
-            android:textSize="20dp"
-            android:text="papa" />
-    </RadioGroup>
-
-    <ImageView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/imageview"
-        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ToggleButton
+            android:id="@+id/toggleButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/togglebutton_on"
+            android:textOn=""
+            android:textOff=""
+            android:text="" />
+
+        <ToggleButton
+            android:id="@+id/toggleButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/togglebutton_on"
+            android:text=""
+            android:textOff=""
+            android:textOn="" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
         android:layout_marginTop="20dp"
-        android:background="@drawable/baby"/>
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:src="@drawable/light_turn_off" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:src="@drawable/light2_turn_off" />
+    </LinearLayout>
 </LinearLayout>

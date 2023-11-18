@@ -1,53 +1,50 @@
 package com.example.ex05;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
-import android.widget.RadioButton;
-import android.widget.Toast;
+import android.widget.ToggleButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-    RadioButton rbObj1, rbObj2, rbObj3;
-    ImageView ivObj;
+    ToggleButton tbObj1, tbObj2;
+    ImageView ivObj1, ivObj2;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        rbObj1 = findViewById(R.id.radioButton1);
-        rbObj2 = findViewById(R.id.radioButton2);
-        rbObj3 = findViewById(R.id.radioButton3);
-        ivObj = findViewById(R.id.imageview);
+        tbObj1 = (ToggleButton) findViewById(R.id.toggleButton1);
+        tbObj2 = findViewById(R.id.toggleButton2);
+        ivObj1 = findViewById(R.id.imageView);
+        ivObj2 = findViewById(R.id.imageView2);
 
-        rbObj1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        tbObj1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (b) {
-                    ivObj.setImageResource(R.drawable.baby);
-                    Toast.makeText(getApplicationContext(), "baby selected", Toast.LENGTH_SHORT).show();
+                    tbObj1.setBackgroundResource(R.drawable.togglebutton_off);
+                    ivObj1.setImageResource(R.drawable.light_turn_on);
+                } else {
+                    tbObj1.setBackgroundResource(R.drawable.togglebutton_on);
+                    ivObj1.setImageResource(R.drawable.light_turn_off);
                 }
             }
         });
 
-        rbObj2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        tbObj2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (b) {
-                    ivObj.setImageResource(R.drawable.mom);
-                    Toast.makeText(getApplicationContext(), "mom selected", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
-
-        rbObj3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b) {
-                    ivObj.setImageResource(R.drawable.papa);
-                    Toast.makeText(getApplicationContext(), "papa selected", Toast.LENGTH_SHORT).show();
+                    tbObj2.setBackgroundResource(R.drawable.togglebutton_off);
+                    ivObj2.setImageResource(R.drawable.light2_turn_on);
+                } else {
+                    tbObj2.setBackgroundResource(R.drawable.togglebutton_on);
+                    ivObj2.setImageResource(R.drawable.light2_turn_off);
                 }
             }
         });
