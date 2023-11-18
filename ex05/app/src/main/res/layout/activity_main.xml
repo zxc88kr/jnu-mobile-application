@@ -5,52 +5,51 @@
     android:orientation="vertical"
     android:layout_margin="10dp">
 
-    <LinearLayout
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:switchMinWidth="60dp"
+        android:switchPadding="20dp"
+        android:textColor="#ff0000"
+        android:textSize="20dp"
+        android:padding="10dp"
+        android:checked="false"
+        android:text="Hide " />
+
+    <Switch
+        android:id="@+id/switch2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:switchMinWidth="60dp"
+        android:switchPadding="20dp"
+        android:textColor="#00ff00"
+        android:textSize="20dp"
+        android:padding="10dp"
+        android:text="Bold " />
+
+    <Switch
+        android:id="@+id/switch3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:switchMinWidth="60dp"
+        android:switchPadding="20dp"
+        android:textColor="#0000ff"
+        android:textSize="20dp"
+        android:thumbTint="#ff0000"
+        android:textOff="X"
+        android:textOn="O"
+        android:showText="true"
+        android:checked="false"
+        android:padding="10dp"
+        android:text="Color" />
+
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <ToggleButton
-            android:id="@+id/toggleButton1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
-            android:background="@drawable/togglebutton_on"
-            android:textOn=""
-            android:textOff=""
-            android:text="" />
-
-        <ToggleButton
-            android:id="@+id/toggleButton2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:background="@drawable/togglebutton_on"
-            android:text=""
-            android:textOff=""
-            android:textOn="" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
         android:layout_marginTop="20dp"
-        android:gravity="center">
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="top"
-            android:src="@drawable/light_turn_off" />
-
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="top"
-            android:src="@drawable/light2_turn_off" />
-    </LinearLayout>
+        android:gravity="center"
+        android:text="Android App"
+        android:textSize="30sp"/>
 </LinearLayout>

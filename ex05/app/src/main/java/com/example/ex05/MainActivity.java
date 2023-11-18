@@ -1,16 +1,20 @@
 package com.example.ex05;
 
 import android.annotation.SuppressLint;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.CompoundButton;
-import android.widget.ImageView;
-import android.widget.ToggleButton;
+import android.widget.Switch;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-    ToggleButton tbObj1, tbObj2;
-    ImageView ivObj1, ivObj2;
+    Switch sbObj1, sbObj2, sbObj3;
+    TextView tvObj;
+    String result = "";
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -18,34 +22,38 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        tbObj1 = (ToggleButton) findViewById(R.id.toggleButton1);
-        tbObj2 = findViewById(R.id.toggleButton2);
-        ivObj1 = findViewById(R.id.imageView);
-        ivObj2 = findViewById(R.id.imageView2);
+        sbObj1 = findViewById(R.id.switch1);
+        sbObj2 = findViewById(R.id.switch2);
+        sbObj3 = findViewById(R.id.switch3);
+        tvObj = findViewById(R.id.textView);
 
-        tbObj1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        sbObj1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b) {
-                    tbObj1.setBackgroundResource(R.drawable.togglebutton_off);
-                    ivObj1.setImageResource(R.drawable.light_turn_on);
-                } else {
-                    tbObj1.setBackgroundResource(R.drawable.togglebutton_on);
-                    ivObj1.setImageResource(R.drawable.light_turn_off);
-                }
+                if (b)
+                    tvObj.setVisibility(View.INVISIBLE);
+                else
+                    tvObj.setVisibility(View.VISIBLE);
             }
         });
 
-        tbObj2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        sbObj2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b) {
-                    tbObj2.setBackgroundResource(R.drawable.togglebutton_off);
-                    ivObj2.setImageResource(R.drawable.light2_turn_on);
-                } else {
-                    tbObj2.setBackgroundResource(R.drawable.togglebutton_on);
-                    ivObj2.setImageResource(R.drawable.light2_turn_off);
-                }
+                if (b)
+                    tvObj.setTypeface(null, Typeface.BOLD);
+                else
+                    tvObj.setTypeface(null, Typeface.NORMAL);
+            }
+        });
+
+        sbObj3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b)
+                    tvObj.setTextColor(Color.RED);
+                else
+                    tvObj.setTextColor(Color.BLACK);
             }
         });
     }
