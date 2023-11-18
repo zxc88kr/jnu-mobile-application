@@ -4,21 +4,28 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
+import android.widget.EditText;
 
 public class SubActivity extends AppCompatActivity {
-    Button btnObj;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sub);
 
-        TextView idObj= findViewById(R.id.textView01);
-        TextView pwObj  = findViewById(R.id.textView02);
-        Intent intent = getIntent();
-        idObj.setText(intent.getStringExtra("userId"));
-        pwObj.setText(intent.getStringExtra("userPw"));
+        Button button = findViewById(R.id.button);
+        EditText editText = findViewById(R.id.editText);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.putExtra("editText", editText.getText().toString());
+
+                setResult(RESULT_OK, intent);
+                finish();
+            }
+        });
     }
 }
