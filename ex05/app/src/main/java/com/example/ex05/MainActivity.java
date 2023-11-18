@@ -1,69 +1,54 @@
 package com.example.ex05;
 
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.ImageView;
+import android.widget.RadioButton;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-    CheckBox cbObj1, cbObj2, cbObj3;
-    Button btnObj;
-    String result = "";
+    RadioButton rbObj1, rbObj2, rbObj3;
+    ImageView ivObj;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        cbObj1=findViewById(R.id.checkBox1);
-        cbObj2=findViewById(R.id.checkBox2);
-        cbObj3=findViewById(R.id.checkBox3);
-        btnObj=findViewById(R.id.button);
+        rbObj1 = findViewById(R.id.radioButton1);
+        rbObj2 = findViewById(R.id.radioButton2);
+        rbObj3 = findViewById(R.id.radioButton3);
+        ivObj = findViewById(R.id.imageview);
 
-        btnObj.setOnClickListener(new View.OnClickListener() {
+        rbObj1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onClick(View view) {
-                result = "selected cb: \n";
-                if (cbObj1.isChecked())
-                    result += "checkbox1,";
-                if (cbObj2.isChecked())
-                    result += "checkbox2,";
-                if (cbObj3.isChecked())
-                    result += "checkbox3,";
-                Toast.makeText(getApplicationContext(), result, Toast.LENGTH_LONG).show();
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b) {
+                    ivObj.setImageResource(R.drawable.baby);
+                    Toast.makeText(getApplicationContext(), "baby selected", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
-        cbObj1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        rbObj2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b)
-                    Toast.makeText(getApplicationContext(), "cb1 selected", Toast.LENGTH_LONG).show();
-                else
-                    Toast.makeText(getApplicationContext(), "cb1 unselected", Toast.LENGTH_LONG).show();
+                if (b) {
+                    ivObj.setImageResource(R.drawable.mom);
+                    Toast.makeText(getApplicationContext(), "mom selected", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
-        cbObj2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        rbObj3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b)
-                    Toast.makeText(getApplicationContext(), "cb2 selected", Toast.LENGTH_LONG).show();
-                else
-                    Toast.makeText(getApplicationContext(), "cb2 unselected", Toast.LENGTH_LONG).show();
-            }
-        });
-        cbObj3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b)
-                    Toast.makeText(getApplicationContext(), "cb3 selected", Toast.LENGTH_LONG).show();
-                else
-                    Toast.makeText(getApplicationContext(), "cb3 unselected", Toast.LENGTH_LONG).show();
+                if (b) {
+                    ivObj.setImageResource(R.drawable.papa);
+                    Toast.makeText(getApplicationContext(), "papa selected", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }

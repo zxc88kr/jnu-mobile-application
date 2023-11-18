@@ -5,28 +5,47 @@
     android:orientation="vertical"
     android:layout_margin="50dp">
 
-    <CheckBox
-        android:id="@+id/checkBox1"
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:textStyle="italic|bold"
+            android:textColor="#fdf835"
+            android:padding="10dp"
+            android:textSize="20dp"
+            android:text="baby" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="italic|bold"
+            android:textColor="#e040fb"
+            android:padding="10dp"
+            android:textSize="20dp"
+            android:text="mom" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="italic|bold"
+            android:textColor="#4484ff"
+            android:padding="10dp"
+            android:textSize="20dp"
+            android:text="papa" />
+    </RadioGroup>
+
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:checked="true"
-        android:text="CheckBox1" />
-
-    <CheckBox
-        android:id="@+id/checkBox2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="CheckBox2" />
-
-    <CheckBox
-        android:id="@+id/checkBox3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="CheckBox3" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="result" />
+        android:id="@+id/imageview"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/baby"/>
 </LinearLayout>
