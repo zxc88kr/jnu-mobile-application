@@ -10,7 +10,7 @@
         android:background="#00aaaa"
         android:layout_weight="0.9">
 
-        <ImageButton
+        <ImageView
             android:id="@+id/coverBtn1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -19,7 +19,7 @@
             android:visibility="visible"
             android:onClick="onClickCover" />
 
-        <ImageButton
+        <ImageView
             android:id="@+id/coverBtn2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
