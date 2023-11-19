@@ -18,7 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:paddingHorizontal="25dp"
+        android:paddingHorizontal="20dp"
         android:orientation="horizontal">
 
         <TextView
@@ -32,7 +32,7 @@
             android:id="@+id/details1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
+            android:layout_marginLeft="20dp"
             android:text="BOOK1234" />
     </LinearLayout>
 
@@ -40,7 +40,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:paddingHorizontal="25dp"
+        android:paddingHorizontal="20dp"
         android:orientation="horizontal">
 
         <TextView
@@ -54,7 +54,7 @@
             android:id="@+id/details2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
+            android:layout_marginLeft="20dp"
             android:text="자바 코딩의 기술"
             android:textStyle="bold"
             android:textColor="#00aaff" />
@@ -64,7 +64,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:paddingHorizontal="25dp"
+        android:paddingHorizontal="20dp"
         android:orientation="horizontal">
 
         <TextView
@@ -78,7 +78,7 @@
             android:id="@+id/details3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
+            android:layout_marginLeft="20dp"
             android:text="22000" />
     </LinearLayout>
 
@@ -86,7 +86,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:paddingHorizontal="25dp"
+        android:paddingHorizontal="20dp"
         android:orientation="horizontal">
 
         <TextView
@@ -100,7 +100,7 @@
             android:id="@+id/details4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
+            android:layout_marginLeft="20dp"
             android:text="2020-07-30" />
     </LinearLayout>
 
@@ -108,7 +108,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:paddingHorizontal="25dp"
+        android:paddingHorizontal="20dp"
         android:orientation="horizontal">
 
         <TextView
@@ -122,7 +122,7 @@
             android:id="@+id/details5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
+            android:layout_marginLeft="20dp"
             android:text="사이먼 하러, 리스 디에츠, 요르그 레너드/심지현" />
     </LinearLayout>
 
@@ -130,7 +130,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:paddingHorizontal="25dp"
+        android:paddingHorizontal="20dp"
         android:orientation="horizontal">
 
         <TextView
@@ -144,7 +144,7 @@
             android:id="@+id/details6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
+            android:layout_marginLeft="20dp"
             android:text="264쪽" />
     </LinearLayout>
 
@@ -152,7 +152,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:paddingHorizontal="25dp"
+        android:paddingHorizontal="20dp"
         android:orientation="horizontal">
 
         <TextView
@@ -166,7 +166,7 @@
             android:id="@+id/details7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
+            android:layout_marginLeft="20dp"
             android:text="코딩 스킬을 개선하는 가장 좋은 방법은 전문가의 코드를 읽는 것이다. 오픈소스 코드를 읽으면서 이해하면 좋지만, 너무 방대하고 스스로 맥락을 찾는 게 어려울 수 있다. 그럴 땐 이 책처럼 현장에서 자주 발견되는 문제 유형 70가지와 해법을 비교하면서 자신의 코드에서 개선할 점을 찾는 것이 좋다." />
     </LinearLayout>
 
@@ -174,7 +174,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:paddingHorizontal="25dp"
+        android:paddingHorizontal="20dp"
         android:orientation="horizontal">
 
         <TextView
@@ -188,7 +188,7 @@
             android:id="@+id/details8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
+            android:layout_marginLeft="20dp"
             android:text="프로그래밍/오픈소스" />
     </LinearLayout>
 </LinearLayout>
