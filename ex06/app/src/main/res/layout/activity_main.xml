@@ -19,4 +19,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="액티비티 이동" />
+
+    <Button
+        android:id="@+id/direct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="웹사이트 이동" />
 </LinearLayout>
