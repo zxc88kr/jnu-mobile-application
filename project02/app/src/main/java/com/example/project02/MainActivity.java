@@ -2,6 +2,7 @@ package com.example.project02;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -39,13 +40,15 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickMenu(View view) {
         if (view.getId() == menuBtn1.getId()) {
-            Toast.makeText(getApplicationContext(), "도서목록 버튼이 클릭되었습니다", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "도서목록 버튼이 클릭되었습니다", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, BooksActivity.class);
+            startActivity(intent);
         } else if (view.getId() == menuBtn2.getId()) {
-            Toast.makeText(getApplicationContext(), "동영상강좌 버튼이 클릭되었습니다", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "동영상강좌 버튼이 클릭되었습니다", Toast.LENGTH_SHORT).show();
         } else if (view.getId() == menuBtn3.getId()) {
-            Toast.makeText(getApplicationContext(), "고객센터 버튼이 클릭되었습니다", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "고객센터 버튼이 클릭되었습니다", Toast.LENGTH_SHORT).show();
         } else if (view.getId() == menuBtn4.getId()) {
-            Toast.makeText(getApplicationContext(), "마이페이지 버튼이 클릭되었습니다", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "마이페이지 버튼이 클릭되었습니다", Toast.LENGTH_SHORT).show();
         }
     }
 }
