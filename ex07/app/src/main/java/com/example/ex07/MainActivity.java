@@ -9,10 +9,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
     LinearLayout layout;
     TextView text;
+    androidx.appcompat.widget.Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +23,9 @@ public class MainActivity extends AppCompatActivity {
 
         layout = (LinearLayout) findViewById(R.id.background);
         text = (TextView) findViewById(R.id.text);
+        toolbar = findViewById(R.id.toolbar);
+
+        setSupportActionBar(toolbar);
     }
 
     @Override
