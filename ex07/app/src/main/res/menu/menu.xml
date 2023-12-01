@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/edit"
+        android:title="편집하기">
+        <menu>
+            <item
+                android:id="@+id/copy"
+                android:title="복사하기" />
+            <item
+                android:id="@+id/cut"
+                android:title="잘라내기" />
+            <item
+                android:id="@+id/paste"
+                android:title="붙여넣기" />
+        </menu>
+    </item>
+    <item
+        android:id="@+id/search"
+        android:title="검색하기" />
+    <item
+        android:id="@+id/save"
+        android:title="저장하기" />
+</menu>
