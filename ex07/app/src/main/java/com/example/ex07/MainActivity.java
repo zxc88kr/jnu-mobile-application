@@ -1,10 +1,12 @@
 package com.example.ex07;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.SubMenu;
+import android.view.MenuItem;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     @Override
@@ -15,14 +17,24 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        SubMenu sub = menu.addSubMenu("편집하기");
-        sub.add(Menu.NONE, Menu.FIRST + 0, Menu.NONE, "복사하기");
-        sub.add(Menu.NONE, Menu.FIRST + 10, Menu.NONE, "잘라내기");
-        sub.add(Menu.NONE, Menu.FIRST + 20, Menu.NONE, "붙여넣기");
-
-        menu.add(Menu.NONE, Menu.FIRST + 1, Menu.NONE, "검색하기");
-        menu.add(Menu.NONE, Menu.FIRST + 2, Menu.NONE, "저장하기");
+        getMenuInflater().inflate(R.menu.menu, menu);
 
         return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menu01:
+                Toast.makeText(this, "메뉴1: " + item.getTitle(), Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.menu02:
+                Toast.makeText(this, "메뉴2: " + item.getTitle(), Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.menu03:
+                Toast.makeText(this, "메뉴3: " + item.getTitle(), Toast.LENGTH_SHORT).show();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
