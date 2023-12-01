@@ -15,13 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        SubMenu sub = menu.addSubMenu("편집하기");
-        sub.add(Menu.NONE, Menu.FIRST + 0, Menu.NONE, "복사하기");
-        sub.add(Menu.NONE, Menu.FIRST + 10, Menu.NONE, "잘라내기");
-        sub.add(Menu.NONE, Menu.FIRST + 20, Menu.NONE, "붙여넣기");
-
-        menu.add(Menu.NONE, Menu.FIRST + 1, Menu.NONE, "검색하기");
-        menu.add(Menu.NONE, Menu.FIRST + 2, Menu.NONE, "저장하기");
+        getMenuInflater().inflate(R.menu.menu, menu);
 
         return super.onCreateOptionsMenu(menu);
     }
