@@ -3,45 +3,51 @@ package com.example.ex07;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
-import android.view.ContextMenu;
+import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.PopupMenu;
-import android.widget.Toast;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    LinearLayout layout;
+    TextView text;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btn = (Button) findViewById(R.id.button);
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                PopupMenu popup = new PopupMenu(getApplicationContext(), btn);
-                popup.inflate(R.menu.menu);
-                popup.show();
-                popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-                    @Override
-                    public boolean onMenuItemClick(MenuItem item) {
-                        switch (item.getItemId()) {
-                            case R.id.menu01:
-                                Toast.makeText(getApplicationContext(), "메뉴1: " + item.getTitle(), Toast.LENGTH_SHORT).show();
-                                break;
-                            case R.id.menu02:
-                                Toast.makeText(getApplicationContext(), "메뉴2: " + item.getTitle(), Toast.LENGTH_SHORT).show();
-                                break;
-                            case R.id.menu03:
-                                Toast.makeText(getApplicationContext(), "메뉴3: " + item.getTitle(), Toast.LENGTH_SHORT).show();
-                                break;
-                        }
-                        return false;
-                    }
-                });
-            }
-        });
+        layout = (LinearLayout) findViewById(R.id.background);
+        text = (TextView) findViewById(R.id.text);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menu01:
+                text.setTextColor(Color.parseColor("#ffff00"));
+                break;
+            case R.id.menu02:
+                text.setTextColor(Color.parseColor("#ffffff"));
+                break;
+            case R.id.menu03:
+                layout.setBackgroundColor(Color.parseColor("#ff0000"));
+                break;
+            case R.id.menu04:
+                layout.setBackgroundColor(Color.parseColor("#00ff00"));
+                break;
+            case R.id.menu05:
+                layout.setBackgroundColor(Color.parseColor("#0000ff"));
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

@@ -1,12 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/menu01"
-        android:title="Android App" />
+        android:title="글자색">
+
+        <menu>
+            <item
+                android:id="@+id/menu01"
+                android:title="노란색" />
+
+            <item
+                android:id="@+id/menu02"
+                android:title="흰색" />
+        </menu>
+    </item>
+
     <item
-        android:id="@+id/menu02"
-        android:title="Kotlin" />
-    <item
-        android:id="@+id/menu03"
-        android:title="Java" />
+        android:title="배경색">
+
+        <menu>
+            <item
+                android:id="@+id/menu03"
+                android:title="빨간색" />
+
+            <item
+                android:id="@+id/menu04"
+                android:title="초록색" />
+
+            <item
+                android:id="@+id/menu05"
+                android:title="파란색" />
+        </menu>
+    </item>
 </menu>
