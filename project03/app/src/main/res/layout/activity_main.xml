@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#00aaaa"
+        android:layout_weight="0.9">
+
+        <ImageView
+            android:id="@+id/cover1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cover01"
+            android:layout_gravity="center"
+            android:visibility="visible"
+            android:onClick="onClickCover" />
+
+        <ImageView
+            android:id="@+id/cover2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cover02"
+            android:layout_gravity="center"
+            android:visibility="invisible"
+            android:onClick="onClickCover" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cover00"
+            android:layout_gravity="center"/>
+    </FrameLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:stretchColumns="*">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+            <ImageButton
+                android:id="@+id/menuBtn1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/menu01"
+                android:padding="5dp"
+                android:background="#d3d3d3"
+                android:layout_gravity="center"
+                android:onClick="onClickMenu" />
+
+            <ImageButton
+                android:id="@+id/menuBtn2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/menu02"
+                android:padding="5dp"
+                android:background="#d3d3d3"
+                android:layout_gravity="center"
+                android:onClick="onClickMenu" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+            <ImageButton
+                android:id="@+id/menuBtn3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/menu03"
+                android:padding="5dp"
+                android:background="#d3d3d3"
+                android:layout_gravity="center"
+                android:onClick="onClickMenu" />
+
+            <ImageButton
+                android:id="@+id/menuBtn4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/menu04"
+                android:padding="5dp"
+                android:background="#d3d3d3"
+                android:layout_gravity="center"
+                android:onClick="onClickMenu" />
+        </TableRow>
+    </TableLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#777777"
+        android:foreground="@drawable/logo"
+        android:foregroundGravity="fill">
+    </FrameLayout>
+</LinearLayout>
