@@ -1,11 +1,15 @@
 package com.example.project03;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class BookActivity extends AppCompatActivity {
     ImageView details0;
@@ -58,5 +62,27 @@ public class BookActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         finish();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_book, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menuHome:
+                Toast.makeText(this, "홈으로 메뉴가 클릭되었습니다2", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.menuBook:
+                Toast.makeText(this, "도서목록 메뉴가 클릭되었습니다", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.menuCart:
+                Toast.makeText(this, "장바구니 메뉴가 클릭되었습니다", Toast.LENGTH_SHORT).show();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
