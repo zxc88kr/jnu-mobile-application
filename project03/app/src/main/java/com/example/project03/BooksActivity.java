@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.SearchView;
 import android.widget.TableLayout;
 import android.widget.Toast;
 
@@ -28,7 +29,7 @@ public class BooksActivity extends AppCompatActivity {
         list1 = findViewById(R.id.list1);
         list2 = findViewById(R.id.list2);
 
-        getSupportActionBar().hide();
+        // getSupportActionBar().hide();
     }
 
     public void onClickList(View view) {
@@ -93,12 +94,31 @@ public class BooksActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_books, menu);
+        MenuItem searchItem = menu.findItem(R.id.menuSearch);
+        SearchView searchView = (SearchView) searchItem.getActionView();
+
+        searchView.setQueryHint(("검색어(도서명)을 입력해주세요"));
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                Toast.makeText(getApplicationContext(), query, Toast.LENGTH_SHORT).show();
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                return false;
+            }
+        });
         return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                break;
             case R.id.menuHome:
                 Toast.makeText(this, "홈으로 메뉴가 클릭되었습니다", Toast.LENGTH_SHORT).show();
                 break;

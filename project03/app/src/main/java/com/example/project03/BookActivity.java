@@ -56,7 +56,7 @@ public class BookActivity extends AppCompatActivity {
                 break;
         }
 
-        getSupportActionBar().hide();
+        // getSupportActionBar().hide();
     }
 
     @Override
@@ -74,21 +74,22 @@ public class BookActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         Intent intent = new Intent();
         switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                break;
             case R.id.menuHome:
                 Toast.makeText(this, "홈으로 메뉴가 클릭되었습니다", Toast.LENGTH_SHORT).show();
-                finish();
                 intent = new Intent(this, MainActivity.class);
-                startActivity(intent);
                 break;
             case R.id.menuBook:
                 Toast.makeText(this, "도서목록 메뉴가 클릭되었습니다", Toast.LENGTH_SHORT).show();
-                finish();
                 intent = new Intent(this, BooksActivity.class);
                 break;
             case R.id.menuCart:
                 Toast.makeText(this, "장바구니 메뉴가 클릭되었습니다", Toast.LENGTH_SHORT).show();
                 break;
         }
+        finish();
         startActivity(intent);
         return super.onOptionsItemSelected(item);
     }
