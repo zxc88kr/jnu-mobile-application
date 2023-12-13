@@ -24,9 +24,11 @@
         </activity>
         <activity
             android:name=".MainActivity" />
-        <activity
+        <activity android:theme="@style/Theme.Project03"
+            android:label="도서목록"
             android:name=".BooksActivity" />
-        <activity
+        <activity android:theme="@style/Theme.Project03"
+            android:label="도서상세정보"
             android:name=".BookActivity" />
     </application>
 </manifest>
