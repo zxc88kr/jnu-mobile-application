@@ -29,7 +29,7 @@ public class BooksActivity extends AppCompatActivity {
         list1 = findViewById(R.id.list1);
         list2 = findViewById(R.id.list2);
 
-        // getSupportActionBar().hide();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     public void onClickList(View view) {

@@ -56,7 +56,7 @@ public class BookActivity extends AppCompatActivity {
                 break;
         }
 
-        // getSupportActionBar().hide();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     @Override
