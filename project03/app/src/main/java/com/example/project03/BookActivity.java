@@ -11,8 +11,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -103,7 +103,7 @@ public class BookActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_book, menu);
         MenuItem cartItem = menu.findItem(R.id.menuCart);
         MenuItemCompat.setActionView(cartItem, R.layout.cart_count);
-        RelativeLayout notifyCount = (RelativeLayout) cartItem.getActionView();
+        FrameLayout notifyCount = (FrameLayout) cartItem.getActionView();
 
         cartCount = (TextView) notifyCount.findViewById(R.id.cartCount);
         cartCount.setText(Integer.toString(count)); // 수정 필요
