@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         TextView textViewPW = dialogView.findViewById(R.id.userPW);
 
                         dialog.dismiss();
-                        Toast.makeText(getApplicationContext(), "아이디: " + textViewID.getText() + "비밀번호: " + textViewPW.getText(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "아이디: " + textViewID.getText() + ", 비밀번호: " + textViewPW.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
                 break;
