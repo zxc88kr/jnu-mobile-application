@@ -55,22 +55,22 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     public void onClickMenu(View view) {
+        Intent intent = new Intent();
         switch (view.getId()) {
             case R.id.menuBtn1:
-                Toast.makeText(this, "도서목록 버튼이 클릭되었습니다", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(this, BooksActivity.class);
+                intent = new Intent(this, BooksActivity.class);
                 startActivity(intent);
                 break;
             case R.id.menuBtn2:
-                Toast.makeText(this, "동영상강좌 버튼이 클릭되었습니다", Toast.LENGTH_SHORT).show();
-                break;
             case R.id.menuBtn3:
-                Toast.makeText(this, "고객센터 버튼이 클릭되었습니다", Toast.LENGTH_SHORT).show();
-                break;
             case R.id.menuBtn4:
-                Toast.makeText(this, "마이페이지 버튼이 클릭되었습니다", Toast.LENGTH_SHORT).show();
                 break;
         }
+        Toast.makeText(this, view.getTag().toString() + " 버튼이 클릭되었습니다", Toast.LENGTH_SHORT).show();
+    }
+
+    public void onClickLogin(View view) {
+
     }
 
     @Override

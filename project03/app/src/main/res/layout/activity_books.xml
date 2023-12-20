@@ -61,6 +61,7 @@
 
                 <ImageView
                     android:id="@+id/book1_1"
+                    android:tag="자바 코딩의 기술"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/book11"
@@ -102,6 +103,7 @@
 
                 <ImageView
                     android:id="@+id/book2_1"
+                    android:tag="머신 러닝을 다루는 기술"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/book21"
@@ -143,6 +145,7 @@
 
                 <ImageView
                     android:id="@+id/book3_1"
+                    android:tag="모던 리눅스 관리"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/book31"
@@ -184,6 +187,7 @@
 
                 <ImageView
                     android:id="@+id/book4_1"
+                    android:tag="유니티 교과서"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:src="@drawable/book41"
@@ -239,6 +243,7 @@
 
                     <ImageView
                         android:id="@+id/book1_2"
+                        android:tag="자바 코딩의 기술"
                         android:layout_width="wrap_content"
                         android:layout_height="160dp"
                         android:src="@drawable/book11"
@@ -258,6 +263,7 @@
 
                     <ImageView
                         android:id="@+id/book2_2"
+                        android:tag="머신 러닝을 다루는 기술"
                         android:layout_width="wrap_content"
                         android:layout_height="160dp"
                         android:src="@drawable/book21"
@@ -284,6 +290,7 @@
 
                     <ImageView
                         android:id="@+id/book3_2"
+                        android:tag="모던 리눅스 관리"
                         android:layout_width="wrap_content"
                         android:layout_height="160dp"
                         android:src="@drawable/book31"
@@ -303,6 +310,7 @@
 
                     <ImageView
                         android:id="@+id/book4_2"
+                        android:tag="유니티 교과서"
                         android:layout_width="wrap_content"
                         android:layout_height="160dp"
                         android:src="@drawable/book41"
