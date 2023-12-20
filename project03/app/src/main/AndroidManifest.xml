@@ -22,7 +22,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
+        <activity android:theme="@style/AppBaseTheme"
+            android:label=""
             android:name=".MainActivity" />
         <activity android:theme="@style/Theme.Project03"
             android:label="도서목록"
