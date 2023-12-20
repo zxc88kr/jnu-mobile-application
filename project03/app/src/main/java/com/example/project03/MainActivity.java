@@ -1,6 +1,7 @@
 package com.example.project03;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -10,7 +11,9 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
@@ -69,16 +72,28 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Toast.makeText(this, view.getTag().toString() + " 버튼이 클릭되었습니다", Toast.LENGTH_SHORT).show();
     }
 
-    public void onClickLogin(View view) {
-
-    }
-
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int index = 0;
         switch (item.getItemId()) {
             case R.id.menuLogin:
                 index = 1;
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                View dialogView = getLayoutInflater().inflate(R.layout.dialog_login, null);
+                builder.setView(dialogView);
+                AlertDialog dialog = builder.show();
+
+                Button loginBtn = dialogView.findViewById(R.id.loginBtn);
+                loginBtn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        TextView textViewID = dialogView.findViewById(R.id.userID);
+                        TextView textViewPW = dialogView.findViewById(R.id.userPW);
+
+                        dialog.dismiss();
+                        Toast.makeText(getApplicationContext(), "아이디: " + textViewID.getText() + "비밀번호: " + textViewPW.getText(), Toast.LENGTH_SHORT).show();
+                    }
+                });
                 break;
             case R.id.menuSetting:
                 index = 2;
@@ -87,8 +102,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 index = 3;
                 break;
         }
-        Toast.makeText(this, "메뉴" + index + ": " + item.getTitle(), Toast.LENGTH_SHORT).show();
         drawerLayout.closeDrawers();
+        Toast.makeText(this, "메뉴" + index + ": " + item.getTitle(), Toast.LENGTH_SHORT).show();
         return false;
     }
 

@@ -70,8 +70,8 @@ public class BooksActivity extends AppCompatActivity {
                         "기타무라 마나미, 김은철, 유세라", "456쪽", "[유니티 교과서, 개정 3판]은 유니티를 사용해 2D/3D 게임과 애니메이션을 만들면서 유니티 기초 지식과 함께 게임 제작 흐름을 익히는 것을 목적으로 한다. 유니티를 설치한 후 C# 핵심 문법을 학습하고, 이어서 여섯 가지 2D/3D 게임을 ‘게임 설계하기 → 프로젝트와 씬 만들기 → 씬에 오브젝트 배치하기 → 스크립트 작성하기 → 스크립트 적용하기’ 단계로 만들어 보면서 게임 제작 흐름을 익힌다.", "게임");
                 break;
         }
-        Toast.makeText(this, view.getTag().toString(), Toast.LENGTH_SHORT).show();
         startActivity(intent);
+        Toast.makeText(this, view.getTag().toString(), Toast.LENGTH_SHORT).show();
     }
 
     public Intent makeIntent(String id, String name, String price, String date,

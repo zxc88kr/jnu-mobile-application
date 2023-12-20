@@ -90,11 +90,11 @@
         android:layout_marginTop="20dp">
 
         <Button
+            android:id="@+id/loginBtn"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:background="@drawable/login"
             android:text="로그인"
-            android:textSize="16dp"
-            android:onClick="onClickLogin" />
+            android:textSize="16dp" />
     </FrameLayout>
 </LinearLayout>

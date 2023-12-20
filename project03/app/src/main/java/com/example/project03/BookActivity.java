@@ -86,9 +86,9 @@ public class BookActivity extends AppCompatActivity {
             case R.id.menuCart:
                 break;
         }
-        Toast.makeText(this, item.getTitle() + " 메뉴가 클릭되었습니다", Toast.LENGTH_SHORT).show();
         startActivity(intent);
         finish();
+        Toast.makeText(this, item.getTitle() + " 메뉴가 클릭되었습니다", Toast.LENGTH_SHORT).show();
         return super.onOptionsItemSelected(item);
     }
 }
