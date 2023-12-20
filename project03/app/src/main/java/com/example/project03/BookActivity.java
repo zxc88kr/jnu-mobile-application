@@ -67,7 +67,7 @@ public class BookActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
-    public void onClickCartPlus(View view) {
+    public void onClickAddCart(View view) {
         AlertDialog.Builder builder = new AlertDialog.Builder(BookActivity.this);
         builder.setTitle("도서주문");
         builder.setMessage("상품을 장바구니에 추가하겠습니까?");

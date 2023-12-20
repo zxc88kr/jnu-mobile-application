@@ -29,14 +29,13 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/cartPlusBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/smallbutton"
                 android:drawableLeft="@drawable/cart"
                 android:padding="5dp"
                 android:text="장바구니담기"
-                android:onClick="onClickCartPlus" />
+                android:onClick="onClickAddCart" />
         </LinearLayout>
 
         <LinearLayout
