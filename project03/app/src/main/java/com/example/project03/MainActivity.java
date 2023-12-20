@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         cover1 = findViewById(R.id.cover1);
         cover2 = findViewById(R.id.cover2);
 
-        getSupportActionBar().hide();
+        // getSupportActionBar().hide();
     }
 
     public void onClickCover(View view) {
