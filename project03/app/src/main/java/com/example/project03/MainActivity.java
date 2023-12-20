@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                 View dialogView = getLayoutInflater().inflate(R.layout.dialog_login, null);
                 builder.setView(dialogView);
-                AlertDialog dialog = builder.show();
+                AlertDialog alertDialog = builder.show();
 
                 Button loginBtn = dialogView.findViewById(R.id.loginBtn);
                 loginBtn.setOnClickListener(new View.OnClickListener() {
@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         TextView textViewID = dialogView.findViewById(R.id.userID);
                         TextView textViewPW = dialogView.findViewById(R.id.userPW);
 
-                        dialog.dismiss();
+                        alertDialog.dismiss();
                         Toast.makeText(getApplicationContext(), "아이디: " + textViewID.getText() + ", 비밀번호: " + textViewPW.getText(), Toast.LENGTH_SHORT).show();
                     }
                 });
