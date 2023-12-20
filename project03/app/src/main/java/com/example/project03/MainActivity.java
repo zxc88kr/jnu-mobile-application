@@ -75,17 +75,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        int index = 0;
         switch (item.getItemId()) {
             case R.id.menuLogin:
-                Toast.makeText(this, "메뉴1: " + item.getTitle(), Toast.LENGTH_SHORT).show();
+                index = 1;
                 break;
             case R.id.menuSetting:
-                Toast.makeText(this, "메뉴2: " + item.getTitle(), Toast.LENGTH_SHORT).show();
+                index = 2;
                 break;
             case R.id.menuMyinfo:
-                Toast.makeText(this, "메뉴3: " + item.getTitle(), Toast.LENGTH_SHORT).show();
+                index = 3;
                 break;
         }
+        Toast.makeText(this, "메뉴" + index + ": " + item.getTitle(), Toast.LENGTH_SHORT).show();
         drawerLayout.closeDrawers();
         return false;
     }
