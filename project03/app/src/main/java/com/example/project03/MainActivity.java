@@ -1,15 +1,26 @@
 package com.example.project03;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+import com.google.android.material.navigation.NavigationView;
+
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     ImageView cover1, cover2;
+
+    Toolbar toolbar;
+    DrawerLayout drawerLayout;
+    NavigationView navigation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +30,18 @@ public class MainActivity extends AppCompatActivity {
         cover1 = findViewById(R.id.cover1);
         cover2 = findViewById(R.id.cover2);
 
-        // getSupportActionBar().hide();
+        toolbar = findViewById(R.id.toolbar);
+        drawerLayout = findViewById(R.id.drawerLayout);
+        navigation = findViewById(R.id.navigation);
+
+        setSupportActionBar(toolbar);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                drawerLayout.openDrawer(Gravity.LEFT);
+            }
+        });
+        navigation.setNavigationItemSelectedListener(this);
     }
 
     public void onClickCover(View view) {
@@ -48,6 +70,32 @@ public class MainActivity extends AppCompatActivity {
             case R.id.menuBtn4:
                 Toast.makeText(this, "마이페이지 버튼이 클릭되었습니다", Toast.LENGTH_SHORT).show();
                 break;
+        }
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menuLogin:
+                Toast.makeText(this, "메뉴1: " + item.getTitle(), Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.menuSetting:
+                Toast.makeText(this, "메뉴2: " + item.getTitle(), Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.menuMyinfo:
+                Toast.makeText(this, "메뉴3: " + item.getTitle(), Toast.LENGTH_SHORT).show();
+                break;
+        }
+        drawerLayout.closeDrawers();
+        return false;
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (drawerLayout.isDrawerOpen(Gravity.LEFT)) {
+            drawerLayout.closeDrawers();
+        } else {
+            super.onBackPressed();
         }
     }
 }
