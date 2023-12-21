@@ -16,13 +16,13 @@
             android:orientation="horizontal">
 
             <CheckBox
-                android:id="@+id/bookCheckBox"
+                android:id="@+id/itemCheckBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp" />
 
             <ImageView
-                android:id="@+id/bookImage"
+                android:id="@+id/itemImage"
                 android:layout_width="70dp"
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
@@ -54,7 +54,7 @@
                         android:textColor="#000000" />
 
                     <TextView
-                        android:id="@+id/bookTitle"
+                        android:id="@+id/itemTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="title"
@@ -75,7 +75,7 @@
                         android:textColor="#000000" />
 
                     <TextView
-                        android:id="@+id/bookPrice"
+                        android:id="@+id/itemPrice"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="price"
@@ -96,7 +96,7 @@
                         android:textColor="#000000" />
 
                     <TextView
-                        android:id="@+id/bookQuantity"
+                        android:id="@+id/itemQuantity"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="quantity"
@@ -117,7 +117,7 @@
                         android:textColor="#000000" />
 
                     <TextView
-                        android:id="@+id/bookSum"
+                        android:id="@+id/itemSum"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="sum"
@@ -127,7 +127,7 @@
             </LinearLayout>
 
             <ImageButton
-                android:id="@+id/bookDeleteBtn"
+                android:id="@+id/itemDeleteBtn"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_gravity="center"

@@ -40,38 +40,38 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull CartAdapter.ViewHolder holder, int position) {
-        Book book = cartRepositoryObj.cartBooks.get(position);
+        Book item = cartRepositoryObj.cartBooks.get(position);
 
-        switch (book.id) {
+        switch (item.id) {
             case "BOOK1234":
-                holder.bookImage.setImageResource(R.drawable.book11);
+                holder.itemImage.setImageResource(R.drawable.book11);
                 break;
             case "BOOK1235":
-                holder.bookImage.setImageResource(R.drawable.book21);
+                holder.itemImage.setImageResource(R.drawable.book21);
                 break;
             case "BOOK1236":
-                holder.bookImage.setImageResource(R.drawable.book31);
+                holder.itemImage.setImageResource(R.drawable.book31);
                 break;
             case "BOOK1237":
-                holder.bookImage.setImageResource(R.drawable.book41);
+                holder.itemImage.setImageResource(R.drawable.book41);
                 break;
         }
 
-        holder.bookTitle.setText(book.name);
-        holder.bookPrice.setText(Integer.toString(book.price));
-        holder.bookCheckBox.setChecked(book.isChecked);
-        holder.bookQuantity.setText(Integer.toString(book.quantity));
-        holder.bookSum.setText(Integer.toString(book.price * book.quantity));
+        holder.itemTitle.setText(item.name);
+        holder.itemPrice.setText(Integer.toString(item.price));
+        holder.itemCheckBox.setChecked(item.isChecked);
+        holder.itemQuantity.setText(Integer.toString(item.quantity));
+        holder.itemSum.setText(Integer.toString(item.price * item.quantity));
 
-        holder.bookCheckBox.setOnClickListener(new View.OnClickListener() {
+        holder.itemCheckBox.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                book.isChecked = holder.bookCheckBox.isChecked();
+                item.isChecked = holder.itemCheckBox.isChecked();
                 selectChangedListener.onSelectChanged(cartRepositoryObj.cartBooks);
             }
         });
 
-        holder.bookDeleteBtn.setOnClickListener(new View.OnClickListener() {
+        holder.itemDeleteBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(context);
@@ -82,8 +82,8 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
                 alertDialog.setPositiveButton("예", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Book book = cartRepositoryObj.cartBooks.get(holder.getAdapterPosition());
-                        cartRepositoryObj.cartBooks.remove(book);
+                        Book item = cartRepositoryObj.cartBooks.get(holder.getAdapterPosition());
+                        cartRepositoryObj.cartBooks.remove(item);
                         notifyItemRemoved(holder.getAdapterPosition());
                         cartUpdate();
                         dialog.dismiss();
@@ -114,23 +114,23 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
-        ImageView bookImage;
-        TextView bookTitle, bookPrice, bookQuantity, bookSum;
+        ImageView itemImage;
+        TextView itemTitle, itemPrice, itemQuantity, itemSum;
 
-        CheckBox bookCheckBox;
-        ImageButton bookDeleteBtn;
+        CheckBox itemCheckBox;
+        ImageButton itemDeleteBtn;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            bookImage = itemView.findViewById(R.id.bookImage);
-            bookTitle = itemView.findViewById(R.id.bookTitle);
-            bookPrice = itemView.findViewById(R.id.bookPrice);
-            bookQuantity = itemView.findViewById(R.id.bookQuantity);
-            bookSum = itemView.findViewById(R.id.bookSum);
+            itemImage = itemView.findViewById(R.id.itemImage);
+            itemTitle = itemView.findViewById(R.id.itemTitle);
+            itemPrice = itemView.findViewById(R.id.itemPrice);
+            itemQuantity = itemView.findViewById(R.id.itemQuantity);
+            itemSum = itemView.findViewById(R.id.itemSum);
 
-            bookCheckBox = itemView.findViewById(R.id.bookCheckBox);
-            bookDeleteBtn = itemView.findViewById(R.id.bookDeleteBtn);
+            itemCheckBox = itemView.findViewById(R.id.itemCheckBox);
+            itemDeleteBtn = itemView.findViewById(R.id.itemDeleteBtn);
         }
     }
 }

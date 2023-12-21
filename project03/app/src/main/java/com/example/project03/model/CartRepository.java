@@ -5,20 +5,20 @@ import java.util.ArrayList;
 public class CartRepository {
     public ArrayList<Book> cartBooks = new ArrayList<Book>();
 
-    public void addCart(Book book) {
+    public void addItem(Book item) {
         boolean isChanged = false;
 
         for (int i = 0; i < cartBooks.size(); i++) {
-            if (cartBooks.get(i).id.equals(book.id)) {
+            if (cartBooks.get(i).id.equals(item.id)) {
                 cartBooks.get(i).quantity++;
                 isChanged = true;
                 break;
             }
         }
         if (!isChanged) {
-            book.quantity = 1;
-            book.isChecked = true;
-            cartBooks.add(book);
+            item.quantity = 1;
+            item.isChecked = true;
+            cartBooks.add(item);
         }
     }
 

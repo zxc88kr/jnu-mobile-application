@@ -21,9 +21,9 @@ import android.widget.Toast;
 import com.example.project03.model.Book;
 
 public class BookActivity extends AppCompatActivity {
-    ImageView details0;
-    TextView details1, details2, details3, details4,
-            details5, details6, details7, details8;
+    ImageView bookImage;
+    TextView bookId, bookName, bookPrice, bookDate,
+            bookWriter, bookPage, bookDescription, bookCategory;
 
     TextView cartCount;
 
@@ -32,38 +32,38 @@ public class BookActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book);
 
-        details0 = findViewById(R.id.details0);
-        details1 = findViewById(R.id.details1);
-        details2 = findViewById(R.id.details2);
-        details3 = findViewById(R.id.details3);
-        details4 = findViewById(R.id.details4);
-        details5 = findViewById(R.id.details5);
-        details6 = findViewById(R.id.details6);
-        details7 = findViewById(R.id.details7);
-        details8 = findViewById(R.id.details8);
+        bookImage = findViewById(R.id.bookImage);
+        bookId = findViewById(R.id.bookId);
+        bookName = findViewById(R.id.bookName);
+        bookPrice = findViewById(R.id.bookPrice);
+        bookDate = findViewById(R.id.bookDate);
+        bookWriter = findViewById(R.id.bookWriter);
+        bookPage = findViewById(R.id.bookPage);
+        bookDescription = findViewById(R.id.bookDescription);
+        bookCategory = findViewById(R.id.bookCategory);
 
         Intent intent = getIntent();
-        details1.setText(intent.getStringExtra("id"));
-        details2.setText(intent.getStringExtra("name"));
-        details3.setText(intent.getStringExtra("price"));
-        details4.setText(intent.getStringExtra("date"));
-        details5.setText(intent.getStringExtra("writer"));
-        details6.setText(intent.getStringExtra("page"));
-        details7.setText(intent.getStringExtra("description"));
-        details8.setText(intent.getStringExtra("category"));
+        bookId.setText(intent.getStringExtra("id"));
+        bookName.setText(intent.getStringExtra("name"));
+        bookPrice.setText(intent.getStringExtra("price"));
+        bookDate.setText(intent.getStringExtra("date"));
+        bookWriter.setText(intent.getStringExtra("writer"));
+        bookPage.setText(intent.getStringExtra("page"));
+        bookDescription.setText(intent.getStringExtra("description"));
+        bookCategory.setText(intent.getStringExtra("category"));
 
-        switch (details1.getText().toString()) {
+        switch (bookId.getText().toString()) {
             case "BOOK1234":
-                details0.setImageResource(R.drawable.book11);
+                bookImage.setImageResource(R.drawable.book11);
                 break;
             case "BOOK1235":
-                details0.setImageResource(R.drawable.book21);
+                bookImage.setImageResource(R.drawable.book21);
                 break;
             case "BOOK1236":
-                details0.setImageResource(R.drawable.book31);
+                bookImage.setImageResource(R.drawable.book31);
                 break;
             case "BOOK1237":
-                details0.setImageResource(R.drawable.book41);
+                bookImage.setImageResource(R.drawable.book41);
                 break;
         }
 
@@ -79,19 +79,19 @@ public class BookActivity extends AppCompatActivity {
         alertDialog.setPositiveButton("예", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                Book book = new Book();
+                Book item = new Book();
 
-                book.id = details1.getText().toString();
-                book.name = details2.getText().toString();
-                book.price = Integer.parseInt(details3.getText().toString());
-                book.date = details4.getText().toString();
-                book.writer = details5.getText().toString();
-                book.page =  details6.getText().toString();
-                book.description = details7.getText().toString();
-                book.category = details8.getText().toString();
-                book.quantity = 0;
-                book.isChecked = true;
-                cartRepositoryObj.addCart(book);
+                item.id = bookId.getText().toString();
+                item.name = bookName.getText().toString();
+                item.price = Integer.parseInt(bookPrice.getText().toString());
+                item.date = bookDate.getText().toString();
+                item.writer = bookWriter.getText().toString();
+                item.page =  bookPage.getText().toString();
+                item.description = bookDescription.getText().toString();
+                item.category = bookCategory.getText().toString();
+                item.quantity = 0;
+                item.isChecked = true;
+                cartRepositoryObj.addItem(item);
 
                 int count = Integer.parseInt(cartCount.getText().toString()) + 1;
                 cartCount.setText(Integer.toString(count));
