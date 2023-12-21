@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.TextView;
@@ -62,6 +63,11 @@ public class CartActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
+    public void onClickShip(View view) {
+        Intent intent = new Intent(this, ShippingActivity.class);
+        startActivity(intent);
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_cart, menu);
@@ -98,7 +104,7 @@ public class CartActivity extends AppCompatActivity {
                 alertDialog.show();
                 break;
             case R.id.menuOrder:
-                Intent intent = new Intent(CartActivity.this, BooksActivity.class); // 수정 필요
+                Intent intent = new Intent(CartActivity.this, ShippingActivity.class);
                 startActivity(intent);
                 break;
         }

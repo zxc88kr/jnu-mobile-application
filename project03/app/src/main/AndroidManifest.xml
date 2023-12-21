@@ -34,5 +34,8 @@
         <activity android:theme="@style/Theme.Project03"
             android:label="장바구니"
             android:name=".CartActivity" />
+        <activity android:theme="@style/Theme.Project03"
+            android:label="배송정보"
+            android:name=".ShippingActivity"/>
     </application>
 </manifest>
