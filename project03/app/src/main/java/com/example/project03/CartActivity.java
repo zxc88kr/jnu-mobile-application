@@ -63,7 +63,7 @@ public class CartActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
-    public void onClickShip(View view) {
+    public void onClickShipping(View view) {
         Intent intent = new Intent(this, ShippingActivity.class);
         startActivity(intent);
     }
