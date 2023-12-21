@@ -6,16 +6,16 @@ public class CartRepository {
     public ArrayList<Book> cartBooks = new ArrayList<Book>();
 
     public void addCart(Book book) {
-        boolean flag = false;
+        boolean isChanged = false;
 
         for (int i = 0; i < cartBooks.size(); i++) {
             if (cartBooks.get(i).id.equals(book.id)) {
                 cartBooks.get(i).quantity++;
-                flag = true;
+                isChanged = true;
                 break;
             }
         }
-        if (!flag) {
+        if (!isChanged) {
             book.quantity = 1;
             book.isChecked = true;
             cartBooks.add(book);

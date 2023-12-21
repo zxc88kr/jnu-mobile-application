@@ -1,5 +1,7 @@
 package com.example.project03;
 
+import static com.example.project03.MainActivity.cartRepositoryObj;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,7 +24,6 @@ public class BookActivity extends AppCompatActivity {
             details5, details6, details7, details8;
 
     TextView cartCount;
-    Integer count = 0; // 수정 필요
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,29 +69,28 @@ public class BookActivity extends AppCompatActivity {
     }
 
     public void onClickAddCart(View view) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(BookActivity.this);
-        builder.setTitle("도서주문");
-        builder.setMessage("상품을 장바구니에 추가하겠습니까?");
-        builder.setIcon(R.drawable.dialog_cat);
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(BookActivity.this);
+        alertDialog.setTitle("도서주문");
+        alertDialog.setMessage("상품을 장바구니에 추가하겠습니까?");
+        alertDialog.setIcon(R.drawable.dialog_cat);
 
-        DialogInterface.OnClickListener listener = new DialogInterface.OnClickListener() {
+        alertDialog.setPositiveButton("예", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                switch (which) {
-                    case DialogInterface.BUTTON_POSITIVE:
-                        count = Integer.parseInt(cartCount.getText().toString()) + 1; // 수정 필요
-                        cartCount.setText(Integer.toString(count));
-                        dialog.dismiss();
-                        break;
-                    case DialogInterface.BUTTON_NEGATIVE:
-                        dialog.cancel();
-                        break;
-                }
+                int count = Integer.parseInt(cartCount.getText().toString()) + 1;
+                cartCount.setText(Integer.toString(count));
+                dialog.dismiss();
             }
-        };
-        builder.setPositiveButton("예", listener);
-        builder.setNegativeButton("아니오", listener);
-        builder.show();
+        });
+
+        alertDialog.setNegativeButton("아니오", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+
+        alertDialog.show();
     }
 
     @Override
@@ -106,12 +106,13 @@ public class BookActivity extends AppCompatActivity {
         FrameLayout notifyCount = (FrameLayout) cartItem.getActionView();
 
         cartCount = (TextView) notifyCount.findViewById(R.id.cartCount);
-        cartCount.setText(Integer.toString(count)); // 수정 필요
+        cartCount.setText(Integer.toString(cartRepositoryObj.getTotalQuantity()));
+
         ImageView imageView = (ImageView) notifyCount.findViewById(R.id.cartImage);
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), BooksActivity.class); // 수정 필요
+                Intent intent = new Intent(getApplicationContext(), CartActivity.class);
                 startActivity(intent);
             }
         });
@@ -127,16 +128,17 @@ public class BookActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
             case R.id.menuHome:
                 intent = new Intent(this, MainActivity.class);
+                startActivity(intent);
+                finish();
                 break;
             case R.id.menuBook:
                 intent = new Intent(this, BooksActivity.class);
+                startActivity(intent);
+                finish();
                 break;
             case R.id.menuCart:
-                // 추가 필요
                 break;
         }
-        startActivity(intent);
-        finish();
         Toast.makeText(this, item.getTitle() + " 메뉴가 클릭되었습니다", Toast.LENGTH_SHORT).show();
         return super.onOptionsItemSelected(item);
     }
