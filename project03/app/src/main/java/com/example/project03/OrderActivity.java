@@ -104,6 +104,7 @@ public class OrderActivity extends AppCompatActivity {
                         dialog.cancel();
                     }
                 });
+                alertDialog.show();
             }
         });
 
