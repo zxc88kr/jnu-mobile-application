@@ -82,14 +82,12 @@ public class BookActivity extends AppCompatActivity {
                 dialog.dismiss();
             }
         });
-
         alertDialog.setNegativeButton("아니오", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.cancel();
             }
         });
-
         alertDialog.show();
     }
 

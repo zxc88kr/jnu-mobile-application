@@ -91,14 +91,12 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
                         dialog.cancel();
                     }
                 });
-
                 alertDialog.setNegativeButton("아니오", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.cancel();
                     }
                 });
-
                 alertDialog.show();
             }
         });
