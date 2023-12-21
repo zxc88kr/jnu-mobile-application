@@ -40,8 +40,11 @@ public class CartActivity extends AppCompatActivity {
         cartSelectAllObj.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) doSelectAll();
-                else doSelectNone();
+                if (isChecked) {
+                    doSelectAll();
+                } else {
+                    doSelectNone();
+                }
             }
         });
 
