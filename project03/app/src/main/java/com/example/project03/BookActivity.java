@@ -18,6 +18,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.project03.model.Book;
+
 public class BookActivity extends AppCompatActivity {
     ImageView details0;
     TextView details1, details2, details3, details4,
@@ -77,7 +79,21 @@ public class BookActivity extends AppCompatActivity {
         alertDialog.setPositiveButton("예", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                int count = Integer.parseInt(cartCount.getText().toString()) + 1;
+                Book book = new Book();
+
+                book.id = details1.getText().toString();
+                book.name = details2.getText().toString();
+                book.price = Integer.parseInt(details3.getText().toString());
+                book.date = details4.getText().toString();
+                book.writer = details5.getText().toString();
+                book.page =  details6.getText().toString();
+                book.description = details7.getText().toString();
+                book.category = details8.getText().toString();
+                book.quantity = 0;
+                book.isChecked = true;
+                cartRepositoryObj.addCart(book);
+
+                int count = Integer.parseInt(cartCount.getText().toString());
                 cartCount.setText(Integer.toString(count));
                 dialog.dismiss();
             }
