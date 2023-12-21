@@ -63,8 +63,8 @@ public class CartActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
-    public void onClickShipping(View view) {
-        Intent intent = new Intent(this, ShippingActivity.class);
+    public void onClickShip(View view) {
+        Intent intent = new Intent(this, ShipActivity.class);
         startActivity(intent);
     }
 
@@ -104,7 +104,7 @@ public class CartActivity extends AppCompatActivity {
                 alertDialog.show();
                 break;
             case R.id.menuOrder:
-                Intent intent = new Intent(CartActivity.this, ShippingActivity.class);
+                Intent intent = new Intent(CartActivity.this, ShipActivity.class);
                 startActivity(intent);
                 break;
         }
