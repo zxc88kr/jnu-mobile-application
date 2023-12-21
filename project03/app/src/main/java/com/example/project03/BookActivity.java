@@ -93,7 +93,7 @@ public class BookActivity extends AppCompatActivity {
                 book.isChecked = true;
                 cartRepositoryObj.addCart(book);
 
-                int count = Integer.parseInt(cartCount.getText().toString());
+                int count = Integer.parseInt(cartCount.getText().toString()) + 1;
                 cartCount.setText(Integer.toString(count));
                 dialog.dismiss();
             }
@@ -155,5 +155,13 @@ public class BookActivity extends AppCompatActivity {
         }
         Toast.makeText(this, item.getTitle() + " 메뉴가 클릭되었습니다", Toast.LENGTH_SHORT).show();
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (cartCount != null) {
+            cartCount.setText(Integer.toString(cartRepositoryObj.getTotalQuantity()));
+        }
     }
 }

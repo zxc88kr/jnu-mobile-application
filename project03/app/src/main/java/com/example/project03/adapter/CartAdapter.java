@@ -82,13 +82,11 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
                 alertDialog.setPositiveButton("예", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Book book = cartRepositoryObj.cartBooks.get(which);
+                        Book book = cartRepositoryObj.cartBooks.get(holder.getAdapterPosition());
                         cartRepositoryObj.cartBooks.remove(book);
-
+                        notifyItemRemoved(holder.getAdapterPosition());
                         cartUpdate();
-                        notifyItemRemoved(which);
-                        notifyItemRangeChanged(which, cartRepositoryObj.cartBooks.size());
-                        dialog.cancel();
+                        dialog.dismiss();
                     }
                 });
                 alertDialog.setNegativeButton("아니오", new DialogInterface.OnClickListener() {

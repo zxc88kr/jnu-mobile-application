@@ -84,8 +84,9 @@ public class CartActivity extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         cartRepositoryObj.cartBooks.clear();
-                        setSelectAllCheckBoxState();
+                        cartAdapter.notifyDataSetChanged();
                         cartUpdate();
+                        dialog.dismiss();
                     }
                 });
                 alertDialog.setNegativeButton("아니오", new DialogInterface.OnClickListener() {
