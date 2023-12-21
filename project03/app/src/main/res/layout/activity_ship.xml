@@ -27,7 +27,6 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
@@ -48,7 +47,7 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/editTextName"
+                    android:id="@+id/shipName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName" />
@@ -67,7 +66,7 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/editTextDate"
+                    android:id="@+id/shipDate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="date|textPersonName" />
@@ -86,7 +85,7 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/editTextPhone"
+                    android:id="@+id/shipPhone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName|phone" />
@@ -105,7 +104,7 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/editTextZipcode"
+                    android:id="@+id/shipZipCode"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="number|textPersonName" />
@@ -124,7 +123,7 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/editTextAddress"
+                    android:id="@+id/shipAddress"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName|textPostalAddress" />

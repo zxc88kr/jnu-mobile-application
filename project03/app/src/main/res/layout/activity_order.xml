@@ -41,7 +41,7 @@
                     android:textColor="#e57373" />
 
                 <TextView
-                    android:id="@+id/textViewDate"
+                    android:id="@+id/orderDate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="date"
@@ -57,7 +57,6 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="배송주소"
@@ -75,7 +74,7 @@
                         android:text="성명 : " />
 
                     <TextView
-                        android:id="@+id/textViewName"
+                        android:id="@+id/orderName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="name" />
@@ -92,7 +91,7 @@
                         android:text="우편변호 : " />
 
                     <TextView
-                        android:id="@+id/textViewZipcode"
+                        android:id="@+id/orderZipCode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="zipcode" />
@@ -109,7 +108,7 @@
                         android:text="주소 : " />
 
                     <TextView
-                        android:id="@+id/textViewAddress"
+                        android:id="@+id/orderAddress"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="address" />
@@ -138,19 +137,9 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="도서명"
-            android:textColor="#e57373"
             android:textSize="13sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="#"
-            android:textColor="#e57373"
-            android:textSize="13sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textColor="#e57373" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -158,9 +147,19 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="가격"
-            android:textColor="#e57373"
             android:textSize="13sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textColor="#e57373" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="수량"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="#e57373" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -168,9 +167,9 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="소계"
-            android:textColor="#e57373"
             android:textSize="13sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textColor="#e57373" />
     </LinearLayout>
 
     <LinearLayout
@@ -178,7 +177,7 @@
         android:layout_height="wrap_content">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/order_recyclerview"
+            android:id="@+id/orderView"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </LinearLayout>
@@ -198,13 +197,13 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textViewTotal"
+            android:id="@+id/orderTotalPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0.0"
-            android:textColor="#e57373"
             android:textSize="14sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textColor="#e57373" />
     </LinearLayout>
 
     <LinearLayout
