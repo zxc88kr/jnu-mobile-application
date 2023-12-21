@@ -3,12 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/menuDelete"
-        android:title="menuDelete"
+        android:title="모두삭제"
         android:icon="@drawable/icon_delete"
         app:showAsAction="always" />
     <item
         android:id="@+id/menuOrder"
-        android:title="menuOrder"
+        android:title="배송정보"
         android:icon="@drawable/icon_order"
         app:showAsAction="always" />
 </menu>
